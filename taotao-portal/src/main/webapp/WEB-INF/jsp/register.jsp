@@ -65,7 +65,7 @@ function regist() {
 })(jQuery);
 function addToFavorite() {
     var a = "http://www.jd.com/";
-    var b = "京东商城-网购上京东，省钱又放心";
+    var b = "淘淘商城-网购上淘淘，省钱又放心";
     if (document.all) {
         window.external.AddFavorite(a, b)
     } else if (window.sidebar) {
@@ -80,7 +80,7 @@ function addToFavorite() {
 <div class="w" id="logo">
     <div>
     	<a href="http://www.taotao.com/">
-    		<img src="/images/taotao-logo.gif" alt="京东商城" width="170" height="60"/>
+    		<img src="/images/taotao-logo.gif" alt="淘淘商城" width="170" height="60"/>
     	</a> <b></b>
     </div>
 </div>
@@ -226,7 +226,7 @@ function addToFavorite() {
                     <div class="fl item-ifo">
                         <input type="checkbox" class="checkbox" checked="checked" id="readme"
                                onclick="agreeonProtocol();">
-                        <label for="protocol">我已阅读并同意<a href="#" class="blue" id="protocol">《京东用户注册协议》</a></label>
+                        <label for="protocol">我已阅读并同意<a href="#" class="blue" id="protocol">《淘淘用户注册协议》</a></label>
                         <span class="clr"></span>
                         <label id="protocol_error" class="error hide">请接受服务条款</label>
                     </div>

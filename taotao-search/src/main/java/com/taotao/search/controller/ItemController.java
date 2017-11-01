@@ -9,6 +9,12 @@ import com.taotao.commom.pojo.TaotaoResult;
 import com.taotao.commom.untils.ExceptionUtil;
 import com.taotao.search.service.ItemService;
 
+/**
+ * @ClassName: ItemController
+ * @Description: 向索引库导入数据
+ * @author qiminghui
+ * @date 2017年11月1日 下午3:31:12
+ */ 
 @Controller
 public class ItemController {
 
