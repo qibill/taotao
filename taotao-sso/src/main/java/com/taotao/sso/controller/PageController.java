@@ -3,6 +3,12 @@ package com.taotao.sso.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/**
+ * @ClassName: PageController
+ * @Description: 页面跳转
+ * @author qiminghui
+ * @date 2017年11月6日 下午4:52:42
+ */ 
 @Controller
 public class PageController {
 

@@ -54,5 +54,23 @@ public class LoginController {
 			return TaotaoResult.build(500, ExceptionUtil.getStackTrace(e));
 		}
 	}
+	
+	@RequestMapping("/user/signOut/{token}")
+	@ResponseBody
+	public Object signOut(@PathVariable String token, String callback) {
+		try {
+			TaotaoResult result = loginService.signOut(token);
+			//支持jsonp调用
+			if (StringUtils.isNotBlank(callback)) {
+				MappingJacksonValue mappingJacksonValue = new MappingJacksonValue(result);
+				mappingJacksonValue.setJsonpFunction(callback);
+				return mappingJacksonValue;
+			}
+			return result;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return TaotaoResult.build(500, ExceptionUtil.getStackTrace(e));
+		}
+	}
 
 }

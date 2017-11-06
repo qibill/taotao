@@ -26,4 +26,12 @@ public interface LoginService {
 	 * @return TaotaoResult
 	 */ 
 	TaotaoResult getUserByToken(String token);
+	
+	/**
+	 * <P> @Title: signout
+	 * <P> @Description: 退出
+	 * @param token
+	 * @return TaotaoResult
+	 */ 
+	TaotaoResult  signOut (String token);
 }

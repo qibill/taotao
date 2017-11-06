@@ -16,7 +16,7 @@ public interface RegisterService {
 	
 	/**
 	 * <P> @Title: register
-	 * <P> @Description: 用户登入
+	 * <P> @Description: 用户注册
 	 * @param user
 	 * @return TaotaoResult
 	 */ 
