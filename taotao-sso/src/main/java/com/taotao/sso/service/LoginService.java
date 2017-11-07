@@ -33,5 +33,5 @@ public interface LoginService {
 	 * @param token
 	 * @return TaotaoResult
 	 */ 
-	TaotaoResult  signOut (String token);
+	TaotaoResult  logout(String token);
 }

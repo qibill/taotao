@@ -55,11 +55,11 @@ public class LoginController {
 		}
 	}
 	
-	@RequestMapping("/user/signOut/{token}")
+	@RequestMapping("/user/logout/{token}")
 	@ResponseBody
-	public Object signOut(@PathVariable String token, String callback) {
+	public Object logout(@PathVariable String token, String callback) {
 		try {
-			TaotaoResult result = loginService.signOut(token);
+			TaotaoResult result = loginService.logout(token);
 			//支持jsonp调用
 			if (StringUtils.isNotBlank(callback)) {
 				MappingJacksonValue mappingJacksonValue = new MappingJacksonValue(result);

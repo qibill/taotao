@@ -85,7 +85,7 @@ public class LoginServiceImpl implements LoginService {
 	}
 
 	@Override
-	public TaotaoResult signOut(String token) {
+	public TaotaoResult logout(String token) {
 		jedisClient.del(token);
 		return TaotaoResult.ok();
 	}
