@@ -64,7 +64,7 @@
 		            <div class="cell p-checkbox"><input data-bind="cbid:1" class="checkbox" type="checkbox" name="checkItem" checked="" value="11345721-1"></div>
 		            <div class="cell p-goods">
 		                <div class="p-img">
-		                	<a href="http://www.taotao.com/item/${cart.itemId }.html" target="_blank">
+		                	<a href="http://www.taotao.com/item/${cart.itemId}.html" target="_blank">
 		                		<img clstag="clickcart|keycount|xincart|p-imglistcart" src="${cart.itemImage}" alt="${cart.itemTitle}" width="52" height="52">
 		                	</a>
 		                </div>    
