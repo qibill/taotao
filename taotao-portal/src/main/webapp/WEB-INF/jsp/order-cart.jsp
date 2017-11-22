@@ -49,6 +49,7 @@
 			<input type="hidden" name="orderItems[${status.index}].picPath" value="${cart.itemImage}"/>
 		</c:forEach>
 		<input type="hidden" name="payment" value="<fmt:formatNumber groupingUsed="false" maxFractionDigits="2" minFractionDigits="2" value="${totalPrice/1000 }"/>"/>
+		<input type="hidden" name="postFee" value="0"/>
 		<input type="hidden" name="orderShipping.receiverName" value="张志君"/>
 		<input type="hidden" name="orderShipping.receiverMobile" value="15800000000"/>
 		<input type="hidden" name="orderShipping.receiverState" value="上海"/>
