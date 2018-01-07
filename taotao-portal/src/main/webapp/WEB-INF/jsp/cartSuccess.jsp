@@ -20,10 +20,10 @@
    <script type="text/javascript" src="/js/taotao.js" charset="utf-8"></script>
 </head> <body id="mainframe">
 <!--shortcut start-->
-<jsp:include page="../commons/shortcut.jsp" />
+<jsp:include page="../commons/header.jsp" />
 <!--shortcut end-->
 <body>
-<h1>此商品已经成功添加到购物车！</h1>
+<h1 class="ftx-02>此商品已经成功添加到购物车！</h1>
 <a href="/cart/cart.html">查看购物车</a>
 <a href="/">继续购物</a>
 </body>

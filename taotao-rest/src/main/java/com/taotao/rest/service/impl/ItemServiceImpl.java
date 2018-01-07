@@ -46,7 +46,7 @@ public class ItemServiceImpl implements ItemService {
 	public TbItem getItemById(Long itemId) {
 		//查询缓存，如果有缓存，直接返回
 		try {
-			String json = jedisClient.get(REDIS_ITEM_KEY + ":" + ITEM_BASE_INFO_KEY + ":" + itemId);
+			String json = jedisClient.get(REDIS_ITEM_KEY + ":" + itemId + ITEM_BASE_INFO_KEY + ":");
 			//判断数据是否存在
 			if (StringUtils.isNotBlank(json)) {
 				// 把json数据转换成java对象
@@ -64,10 +64,10 @@ public class ItemServiceImpl implements ItemService {
 		//添加缓存原则是不能影响正常的业务逻辑
 		try {
 			//向redis中添加缓存
-			jedisClient.set(REDIS_ITEM_KEY + ":" + ITEM_BASE_INFO_KEY + ":" + itemId
+			jedisClient.set(REDIS_ITEM_KEY + ":" + itemId + ITEM_BASE_INFO_KEY + ":"
 					, JsonUtils.objectToJson(item));
 			//设置key的过期时间
-			jedisClient.expire(REDIS_ITEM_KEY + ":" + ITEM_BASE_INFO_KEY + ":" + itemId, ITEM_EXPIRE_SECOND);
+			jedisClient.expire(REDIS_ITEM_KEY + ":" + itemId + ITEM_BASE_INFO_KEY + ":", ITEM_EXPIRE_SECOND);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
