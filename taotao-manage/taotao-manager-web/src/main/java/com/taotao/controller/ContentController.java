@@ -21,8 +21,8 @@ public class ContentController {
 	private ContentService contentService;
 	@Value("${REST_BASE_URL}")
 	private String REST_BASE_URL;
-	@Value("${REST_CONTENT_SYNC_UR}")
-	private String REST_CONTENT_SYNC_UR;
+	@Value("${REST_CONTENT_SYNC_URL}")
+	private String REST_CONTENT_SYNC_URL;
 	
 	@RequestMapping("/query/list")
 	@ResponseBody
@@ -36,7 +36,7 @@ public class ContentController {
 	public TaotaoResult createContent(TbContent content) {
 		TaotaoResult result = contentService.createContent(content);
 		//调用taotao-rest发布的服务，同步缓存。
-		HttpClientUtil.doGet(REST_BASE_URL + REST_CONTENT_SYNC_UR +content.getCategoryId());
+		HttpClientUtil.doGet(REST_BASE_URL + REST_CONTENT_SYNC_URL +content.getCategoryId());
 		return result;
 	}
 	
@@ -50,7 +50,7 @@ public class ContentController {
 			TaotaoResult taotaoResult = contentService.deleteContent(id);
 			if (taotaoResult.isOK()) {
 				TbContent content = (TbContent) taotaoResult.getData();
-				HttpClientUtil.doGet(REST_BASE_URL + REST_CONTENT_SYNC_UR + content.getCategoryId());
+				HttpClientUtil.doGet(REST_BASE_URL + REST_CONTENT_SYNC_URL + content.getCategoryId());
 			} else {
 				result.setStatus(500);
 				result.setMsg("删除失败");

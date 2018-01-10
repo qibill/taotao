@@ -54,5 +54,10 @@
 		<!-- 伪静态 -->
 		<url-pattern>*.html</url-pattern>
 	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>taotao-portal</servlet-name>
+		<!-- 防止FreeMarker生成的页面出现406问题 -->
+		<url-pattern>*.action</url-pattern>
+	</servlet-mapping>
 
 </web-app>
